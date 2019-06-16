@@ -20,11 +20,8 @@ generatorConfig.xml
 .buildpath
 .springBeans
 .pydevproject
-zaozuo-web.iml
 /target/
 /deploy
 /logs/
-src/main/resources/log4j2.xml
-src/main/resources/log4j2.xml
 log.txt
 /out/
