@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: myxyy-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hlhdidi/someconfig.git
+          username: hlhdidi
+          password: '{cipher}AQAS0su+oqLtX8lqi/IJHEN8BJfeRUMcn1OTQlOpxLmQDsPyDoF1Lqkn4ExXHYUc77MVZlik6xHvkkjSeTG7odglkVhIcZJQ+6caWVLb9H12cCZwC5P4pnVMBdrLFqaGMvkw/+dtcjn8zwrOs1LKeFZzn66UGmimQXn1kDncr4WbBodvFgRY1xAOFLLzUUgit8RKtkGr1ifmvqtztusTxOTYSsYg9IBJOqWGjyNhXSkXOgfvVlwK/vYzit3ISsqAsZnIB2pZS5DbfL/nBcTmzzzvdIWGMky9kA20zx65+IHlDaT8zam8E7UwX0dGw5LrqK+bTFS5C6aEizbnUXg8Vrr89cwsYxZ6M7H00GC4wSx7rRnNetsggSbBVLm7A+MSEno='
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 9023
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+# 动态刷新
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,bus-refresh

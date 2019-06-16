@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: springcloud-stream
+  cloud:
+    stream:
+      bindings:
+        xyy-hlhdidi-exchange:
+          destination: thisxyy
+          producer:
+            partition-count: 2
+            partition-key-expression: headers['partitionKey']
+server:
+  port: 8081
